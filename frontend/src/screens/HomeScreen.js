@@ -12,7 +12,7 @@ const HomeScreen = () => {
       setProducts(data)
     }
     fetchProducts()
-  })
+  }, [])
 
   return (
     <>
