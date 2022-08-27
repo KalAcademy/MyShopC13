@@ -5,7 +5,7 @@ import { userLoginReducer,
   userDetailsReducer,
   userUpdateProfileReducer,userRegisterReducer  } from './reducers/userReducers'
 import { orderCreateReducer,
-  orderDetailsReducer, } from './reducers/orderReducers'
+  orderDetailsReducer, orderPayReducer, } from './reducers/orderReducers'
 
 const rootReducer = combineReducers({
   productList: productListReducer,
@@ -17,6 +17,7 @@ const rootReducer = combineReducers({
   userUpdateProfile: userUpdateProfileReducer,
   orderCreate: orderCreateReducer, 
   orderDetails: orderDetailsReducer,  
+  orderPay: orderPayReducer, 
 })
 
 const paymentMethodFromStorage = localStorage.getItem('paymentMethod')
