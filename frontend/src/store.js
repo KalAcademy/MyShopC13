@@ -46,7 +46,11 @@ const initialState = {
 }
 const store = configureStore({
   reducer: rootReducer,
-  preloadedState: initialState
+  preloadedState: initialState,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+               immutableCheck: false,
+               serializableCheck: false,
+  })
 })
 
 export default store
